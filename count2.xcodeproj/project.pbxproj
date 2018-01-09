@@ -13,6 +13,13 @@
 		565906952004552F00CDA44E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 565906942004552F00CDA44E /* Assets.xcassets */; };
 		565906982004552F00CDA44E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 565906962004552F00CDA44E /* LaunchScreen.storyboard */; };
 		565906A32004552F00CDA44E /* count2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565906A22004552F00CDA44E /* count2Tests.swift */; };
+		565906AF2004554700CDA44E /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565906AE2004554700CDA44E /* Counter.swift */; };
+		565906B22004584E00CDA44E /* CounterBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565906B12004584E00CDA44E /* CounterBaseViewController.swift */; };
+		565906B5200458E400CDA44E /* SafeAreaLayoutGuideCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565906B4200458E400CDA44E /* SafeAreaLayoutGuideCompatible.swift */; };
+		565906B82004591100CDA44E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565906B72004591100CDA44E /* UIView+Extension.swift */; };
+		565906BB200469AF00CDA44E /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565906BA200469AF00CDA44E /* TopView.swift */; };
+		565906BD2004817600CDA44E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565906BC2004817600CDA44E /* Constants.swift */; };
+		565906BF20048D2100CDA44E /* NormalCountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565906BE20048D2100CDA44E /* NormalCountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +43,13 @@
 		5659069E2004552F00CDA44E /* count2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = count2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		565906A22004552F00CDA44E /* count2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = count2Tests.swift; sourceTree = "<group>"; };
 		565906A42004552F00CDA44E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		565906AE2004554700CDA44E /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		565906B12004584E00CDA44E /* CounterBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterBaseViewController.swift; sourceTree = "<group>"; };
+		565906B4200458E400CDA44E /* SafeAreaLayoutGuideCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaLayoutGuideCompatible.swift; sourceTree = "<group>"; };
+		565906B72004591100CDA44E /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		565906BA200469AF00CDA44E /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
+		565906BC2004817600CDA44E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		565906BE20048D2100CDA44E /* NormalCountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +91,11 @@
 		5659068C2004552F00CDA44E /* count2 */ = {
 			isa = PBXGroup;
 			children = (
+				565906B9200469A700CDA44E /* View */,
+				565906B3200458B800CDA44E /* Common */,
+				565906B02004583E00CDA44E /* ViewController */,
+				565906AD2004553900CDA44E /* Model */,
 				5659068D2004552F00CDA44E /* AppDelegate.swift */,
-				5659068F2004552F00CDA44E /* ViewController.swift */,
 				565906912004552F00CDA44E /* Main.storyboard */,
 				565906942004552F00CDA44E /* Assets.xcassets */,
 				565906962004552F00CDA44E /* LaunchScreen.storyboard */,
@@ -94,6 +111,50 @@
 				565906A42004552F00CDA44E /* Info.plist */,
 			);
 			path = count2Tests;
+			sourceTree = "<group>";
+		};
+		565906AD2004553900CDA44E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				565906AE2004554700CDA44E /* Counter.swift */,
+				565906BC2004817600CDA44E /* Constants.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		565906B02004583E00CDA44E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				565906B12004584E00CDA44E /* CounterBaseViewController.swift */,
+				565906BE20048D2100CDA44E /* NormalCountViewController.swift */,
+				5659068F2004552F00CDA44E /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		565906B3200458B800CDA44E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				565906B62004590800CDA44E /* Extension */,
+				565906B4200458E400CDA44E /* SafeAreaLayoutGuideCompatible.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		565906B62004590800CDA44E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				565906B72004591100CDA44E /* UIView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		565906B9200469A700CDA44E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				565906BA200469AF00CDA44E /* TopView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +260,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				565906BB200469AF00CDA44E /* TopView.swift in Sources */,
+				565906B82004591100CDA44E /* UIView+Extension.swift in Sources */,
+				565906BF20048D2100CDA44E /* NormalCountViewController.swift in Sources */,
+				565906B5200458E400CDA44E /* SafeAreaLayoutGuideCompatible.swift in Sources */,
+				565906B22004584E00CDA44E /* CounterBaseViewController.swift in Sources */,
 				565906902004552F00CDA44E /* ViewController.swift in Sources */,
 				5659068E2004552F00CDA44E /* AppDelegate.swift in Sources */,
+				565906AF2004554700CDA44E /* Counter.swift in Sources */,
+				565906BD2004817600CDA44E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
