@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Counter {
+final class Counter {
     
     private(set) var value = 0 {
         didSet {

@@ -14,8 +14,15 @@ class NormalCountViewController: CounterBaseViewController {
         let label = UILabel()
         label.textAlignment = .center
         label.textColor = Constants.tintColor
-        label.font = UIFont.systemFont(ofSize: 40)
+        label.font = UIFont.systemFont(ofSize: 50)
         return label
+    }()
+    
+    lazy var edgeView: EdgeView = {
+        let edgeView = EdgeView(contentView: countButton, position: .bottom)
+        edgeView.backgroundColor = Constants.tintColor
+        edgeView.contentViewHeight = 60
+        return edgeView
     }()
     
     override func viewDidLoad() {
@@ -24,9 +31,6 @@ class NormalCountViewController: CounterBaseViewController {
         view.addSubview(label)
         label.constraintTo(fullWidthOf: view, withHeight: 50, centerY: view.safeAreaLayoutGuide.centerYAnchor, yOffset: -30)
         
-        let edgeView = EdgeView(contentView: countButton, position: .bottom)
-        edgeView.backgroundColor = Constants.tintColor
-        edgeView.contentViewHeight = 60
         edgeView.addTo(viewController: self)
         
         view.addSubview(resetButton)
@@ -40,7 +44,9 @@ class NormalCountViewController: CounterBaseViewController {
         resetButton.layer.cornerRadius = 25
         
         counter.observe { [weak self] value in
-            self?.label.text = "\(value)"
+            DispatchQueue.main.async {
+                self?.label.text = "\(value)"
+            }
         }
     }
 }

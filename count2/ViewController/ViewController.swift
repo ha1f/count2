@@ -27,6 +27,9 @@ class ViewController: UIViewController {
     fileprivate var viewModel: [CountersTableCellViewModel] = [
         CountersTableCellViewModel(title: "normal") {
             return NormalCountViewController()
+        },
+        CountersTableCellViewModel(title: "timer") {
+            return TimerCountViewController()
         }
     ]
     
@@ -38,6 +41,17 @@ class ViewController: UIViewController {
         
         view.addSubview(tableView)
         tableView.constraintTo(safeAreaOf: view)
+    }
+    
+    fileprivate func moveToViewController(at index: Int) {
+        guard self.viewModel.indices.contains(index) else {
+            return
+        }
+        let viewModel = self.viewModel[index]
+        
+        let viewController = viewModel.instantiateViewController()
+        viewController.title = viewModel.title
+        self.show(viewController, sender: nil)
     }
 }
 
@@ -55,12 +69,7 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        let viewModel = self.viewModel[indexPath.row]
-        
-        let viewController = viewModel.instantiateViewController()
-        viewController.title = viewModel.title
-        self.show(viewController, sender: nil)
+        moveToViewController(at: indexPath.row)
     }
 }
 
