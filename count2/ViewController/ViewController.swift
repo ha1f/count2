@@ -30,6 +30,9 @@ class ViewController: UIViewController {
         },
         CountersTableCellViewModel(title: "timer") {
             return TimerCountViewController()
+        },
+        CountersTableCellViewModel(title: "movie") {
+            return MovieCountViewController()
         }
     ]
     

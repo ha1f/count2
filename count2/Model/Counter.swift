@@ -7,14 +7,16 @@
 //
 
 import Foundation
+import RxSwift
 
 final class Counter {
-    
     private(set) var value = 0 {
         didSet {
             observer?(value)
         }
     }
+    
+    var timer: Timer?
     
     private var observer: ((Int) -> ())?
     
@@ -23,6 +25,18 @@ final class Counter {
         
         // Pass initial value
         observer(value)
+    }
+    
+    func countWithTimer(timeInterval: TimeInterval) {
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: timeInterval, repeats: true) { [weak self] _ in
+            self?.count()
+        }
+    }
+    
+    func invalidateTimer() {
+        timer?.invalidate()
+        timer = nil
     }
     
     func resetObserver() {
@@ -35,5 +49,9 @@ final class Counter {
     
     func count() {
         value += 1
+    }
+    
+    deinit {
+        invalidateTimer()
     }
 }

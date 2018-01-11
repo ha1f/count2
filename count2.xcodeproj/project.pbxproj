@@ -17,10 +17,12 @@
 		565906B22004584E00CDA44E /* CounterBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565906B12004584E00CDA44E /* CounterBaseViewController.swift */; };
 		565906B5200458E400CDA44E /* SafeAreaLayoutGuideCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565906B4200458E400CDA44E /* SafeAreaLayoutGuideCompatible.swift */; };
 		565906B82004591100CDA44E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565906B72004591100CDA44E /* UIView+Extension.swift */; };
-		565906BB200469AF00CDA44E /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565906BA200469AF00CDA44E /* TopView.swift */; };
+		565906BB200469AF00CDA44E /* EdgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565906BA200469AF00CDA44E /* EdgeView.swift */; };
 		565906BD2004817600CDA44E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565906BC2004817600CDA44E /* Constants.swift */; };
 		565906BF20048D2100CDA44E /* NormalCountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565906BE20048D2100CDA44E /* NormalCountViewController.swift */; };
 		565906C220049C1200CDA44E /* TimerCountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565906C120049C1200CDA44E /* TimerCountViewController.swift */; };
+		56A5D0B120070863005F29FC /* ToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5D0B020070863005F29FC /* ToolsView.swift */; };
+		56A5D0B420070B8E005F29FC /* CounterValueViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5D0B320070B8E005F29FC /* CounterValueViewType.swift */; };
 		97BF6713D2E696801749EA32 /* Pods_count2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A16E91344691F3C3285F1F /* Pods_count2Tests.framework */; };
 		C9AF19E0D752994A089FB0FC /* Pods_count2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472F64A01DB95B258B6071CD /* Pods_count2.framework */; };
 /* End PBXBuildFile section */
@@ -53,10 +55,12 @@
 		565906B12004584E00CDA44E /* CounterBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterBaseViewController.swift; sourceTree = "<group>"; };
 		565906B4200458E400CDA44E /* SafeAreaLayoutGuideCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaLayoutGuideCompatible.swift; sourceTree = "<group>"; };
 		565906B72004591100CDA44E /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		565906BA200469AF00CDA44E /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
+		565906BA200469AF00CDA44E /* EdgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeView.swift; sourceTree = "<group>"; };
 		565906BC2004817600CDA44E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		565906BE20048D2100CDA44E /* NormalCountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCountViewController.swift; sourceTree = "<group>"; };
 		565906C120049C1200CDA44E /* TimerCountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCountViewController.swift; sourceTree = "<group>"; };
+		56A5D0B020070863005F29FC /* ToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsView.swift; sourceTree = "<group>"; };
+		56A5D0B320070B8E005F29FC /* CounterValueViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterValueViewType.swift; sourceTree = "<group>"; };
 		8663BADFF41146AFF39CB9EE /* Pods-count2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-count2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-count2Tests/Pods-count2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		AA44D5E597BB1F75115F2109 /* Pods-count2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-count2.release.xcconfig"; path = "Pods/Target Support Files/Pods-count2/Pods-count2.release.xcconfig"; sourceTree = "<group>"; };
 		C846B21B0C4AAB2A595EEFEB /* Pods-count2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-count2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-count2/Pods-count2.debug.xcconfig"; sourceTree = "<group>"; };
@@ -139,7 +143,8 @@
 		565906B02004583E00CDA44E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				565906C020049BF900CDA44E /* CountView */,
+				56A5D0B220070B77005F29FC /* ValueView */,
+				565906C020049BF900CDA44E /* CountViewController */,
 				565906B12004584E00CDA44E /* CounterBaseViewController.swift */,
 				5659068F2004552F00CDA44E /* ViewController.swift */,
 			);
@@ -166,18 +171,27 @@
 		565906B9200469A700CDA44E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				565906BA200469AF00CDA44E /* TopView.swift */,
+				565906BA200469AF00CDA44E /* EdgeView.swift */,
+				56A5D0B020070863005F29FC /* ToolsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		565906C020049BF900CDA44E /* CountView */ = {
+		565906C020049BF900CDA44E /* CountViewController */ = {
 			isa = PBXGroup;
 			children = (
 				565906BE20048D2100CDA44E /* NormalCountViewController.swift */,
 				565906C120049C1200CDA44E /* TimerCountViewController.swift */,
 			);
-			path = CountView;
+			path = CountViewController;
+			sourceTree = "<group>";
+		};
+		56A5D0B220070B77005F29FC /* ValueView */ = {
+			isa = PBXGroup;
+			children = (
+				56A5D0B320070B8E005F29FC /* CounterValueViewType.swift */,
+			);
+			path = ValueView;
 			sourceTree = "<group>";
 		};
 		87464800D68317A41F330E75 /* Pods */ = {
@@ -430,12 +444,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				565906BB200469AF00CDA44E /* TopView.swift in Sources */,
+				565906BB200469AF00CDA44E /* EdgeView.swift in Sources */,
 				565906B82004591100CDA44E /* UIView+Extension.swift in Sources */,
+				56A5D0B120070863005F29FC /* ToolsView.swift in Sources */,
 				565906BF20048D2100CDA44E /* NormalCountViewController.swift in Sources */,
 				565906B5200458E400CDA44E /* SafeAreaLayoutGuideCompatible.swift in Sources */,
 				565906C220049C1200CDA44E /* TimerCountViewController.swift in Sources */,
 				565906B22004584E00CDA44E /* CounterBaseViewController.swift in Sources */,
+				56A5D0B420070B8E005F29FC /* CounterValueViewType.swift in Sources */,
 				565906902004552F00CDA44E /* ViewController.swift in Sources */,
 				5659068E2004552F00CDA44E /* AppDelegate.swift in Sources */,
 				565906AF2004554700CDA44E /* Counter.swift in Sources */,
