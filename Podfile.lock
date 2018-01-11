@@ -1,21 +1,23 @@
 PODS:
   - C4 (3.0.1)
   - Differentiator (3.0.2)
+  - Instantiate (2.2.0)
   - LTMorphingLabel (0.5.6)
-  - RxBlocking (4.1.0):
+  - RxBlocking (4.1.1):
     - RxSwift (~> 4.0)
-  - RxCocoa (4.1.0):
+  - RxCocoa (4.1.1):
     - RxSwift (~> 4.0)
   - RxDataSources (3.0.2):
     - Differentiator (~> 3.0)
     - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
-  - RxSwift (4.1.0)
-  - RxTest (4.1.0):
+  - RxSwift (4.1.1)
+  - RxTest (4.1.1):
     - RxSwift (~> 4.0)
 
 DEPENDENCIES:
   - C4 (~> 3.0)
+  - Instantiate
   - LTMorphingLabel
   - RxBlocking (~> 4.0)
   - RxCocoa (~> 4.0)
@@ -26,13 +28,14 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   C4: 8a51425000f760d5e89ba294a8284467a1bd1231
   Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
+  Instantiate: 9810ecb69b7d0c393e1938559a6f896587785b64
   LTMorphingLabel: bdb51d4682e9822da89da6f567bd8aa456fd6650
-  RxBlocking: 193d33fad26f00a4e60831481938486deaaaa200
-  RxCocoa: cc1fec49cdc8fabe645964de7c51c099a36c2aa8
+  RxBlocking: 22e7d7b86a1c0c42164a30d64f56f97128b4ffab
+  RxCocoa: fd0862fd2df95fa55562ad28ffd2522c25eb4a85
   RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
-  RxSwift: 4219941c1244c88002901bd87a69d3aea9ae71f0
-  RxTest: cc62dd7e02049f21dfc910d0c4ca8fee1ecd4f74
+  RxSwift: c6e3b1c7b325c7d121cd4327e9d98b7ed746b570
+  RxTest: f934010a5b07ecd627cb70b38eb4baf0414591d2
 
-PODFILE CHECKSUM: 69187dfed8154879219f3920bb15a4e1986d6ac9
+PODFILE CHECKSUM: 2e8894e11d3129b7dbe5da34a581b0639e18a274
 
 COCOAPODS: 1.3.1

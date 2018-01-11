@@ -11,6 +11,7 @@ target 'count2' do
   pod 'RxDataSources', '~> 3.0'
   pod 'LTMorphingLabel'
   pod 'C4', '~> 3.0'
+  pod 'Instantiate'
 
   target 'count2Tests' do
     inherit! :search_paths
